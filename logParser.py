@@ -2,7 +2,7 @@
 ###############################################################################
 # Python Parsing Code for Mission Planner Data Logs
 # By: Brandon Hickey
-# Date: 5/16/2022
+# Date: 5/18/2022
 
 # Description: This code will be used to convert a mission planner log file
 #               to a comma separate values document containing
@@ -137,12 +137,6 @@ for row in experimentalData[:]:
                 expTimeArray.append(innerTimeArray)
                 expDataArray.append(innerDataArray)
 
-# Data Logging
-innerArray=[]
-innerArray.append('Time (s)')
-for row in range(len(searchTermArray)):
-    innerArray.append('Experimental '+str(searchTermArray[row][2]))
-
 
 # Pair Data
 for row in range(len(expDataArray)):
@@ -201,3 +195,4 @@ with open(fileSaveName, 'w') as file:
 
 root.destroy()
 print("Parsing Finished")
+
